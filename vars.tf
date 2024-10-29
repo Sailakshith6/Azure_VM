@@ -80,6 +80,7 @@ variable "sku" {
 variable "os_version" {
    type   = string
   }
- storage_image_reference {
-    id = var.image_id  # Use the variable here
-  }
+ variable "image_id" {
+  description = "The ID of the private image to use for the virtual machine"
+  type        = string
+}
