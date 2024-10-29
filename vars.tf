@@ -64,19 +64,6 @@ variable "vm_username" {
   type   = string
   }
 
-variable "publisher" {
-  description = "The Publisher"
-  type   = string
-  }
-
-variable "offer" {
-  type   = string
-  }
-
-variable "sku" {
-  type   = string
-  }
-
 variable "os_version" {
    type   = string
   }
