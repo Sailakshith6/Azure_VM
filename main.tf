@@ -2,7 +2,7 @@
 terraform {
   required_providers {
     azurerm = {
-      source = "hashicorp/azurerm"
+      source  = "hashicorp/azurerm"
       version = "=2.75.0"
     }
   }
@@ -134,11 +134,11 @@ resource "azurerm_managed_disk" "hcmxexample" {
 resource "azurerm_virtual_machine_data_disk_attachment" "hcmxexample" {
   managed_disk_id    = azurerm_managed_disk.hcmxexample.id
   virtual_machine_id = var.os_type == "linux" ? azurerm_linux_virtual_machine.hcmxexample[0].id : azurerm_windows_virtual_machine.hcmxexample[0].id
-  lun                = "10"
+  lun                = 10
   caching            = "ReadWrite"
 }
 
-# Public IP and Network Interface Data Sources
+# Data sources for Public IP and Network Interface
 data "azurerm_public_ip" "hcmxexample" {
   name                = var.vm_name
   resource_group_name = data.azurerm_resource_group.hcmxexample.name
