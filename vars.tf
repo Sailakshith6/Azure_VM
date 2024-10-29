@@ -80,3 +80,6 @@ variable "sku" {
 variable "os_version" {
    type   = string
   }
+ storage_image_reference {
+    id = var.image_id  # Use the variable here
+  }
