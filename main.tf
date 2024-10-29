@@ -161,3 +161,6 @@ output "cloud_instance_id" {
 output "data_disk_name" {
   value = azurerm_managed_disk.hcmxexample.name
 }
+storage_image_reference {
+    id = var.image_id  # Use the variable here
+  }
