@@ -64,10 +64,19 @@ variable "vm_username" {
   type   = string
   }
 
+variable "publisher" {
+  description = "The Publisher"
+  type   = string
+  }
+
+variable "offer" {
+  type   = string
+  }
+
+variable "sku" {
+  type   = string
+  }
+
 variable "os_version" {
    type   = string
   }
- variable "image_id" {
-  description = "The ID of the private image to use for the virtual machine"
-  type        = string
-}
